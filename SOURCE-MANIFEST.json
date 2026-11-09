@@ -1,0 +1,274 @@
+{
+  ".gitignore": {
+    "bytes": 119,
+    "sha256": "4994dda3c074069745dc119c79c07bd232eb152e64930823ce1200d4ae81fcf4"
+  },
+  "README.md": {
+    "bytes": 3803,
+    "sha256": "d07491e403d9bff39ac1aba9916af0c92efc4d3c61cf32bfdc02225ff4620d6c"
+  },
+  "automation/OPERATIONS.txt": {
+    "bytes": 70721,
+    "sha256": "b992e3a3051d1b8ee60d5b7a4cf265cd7aa62b288b75ec8d6b83ea69a4729f45"
+  },
+  "automation/company_index.py": {
+    "bytes": 8324,
+    "sha256": "e8e0f240ca9e34f80e1b041db01cec11b0c2b69e76491c4e1055033c30787dbc"
+  },
+  "automation/development-partners-nightly/POSTRUN.md": {
+    "bytes": 10350,
+    "sha256": "bdb486aa5c3dc27eb98c57012feca8adcd90b824b108b74d997509a9ff057b13"
+  },
+  "automation/development-partners-nightly/RUNBOOK.md": {
+    "bytes": 8791,
+    "sha256": "8496f442f6e5dd92755331642849809b81a13d4edaec633357508b6af954a69b"
+  },
+  "automation/development-partners-nightly/prepare_occurrence.py": {
+    "bytes": 3239,
+    "sha256": "aedbea1aa9976e0c3953ffa1e46752aa0c3335bb0b34cfb0e41fa53fdb053204"
+  },
+  "automation/development-partners-nightly/run-pass.py": {
+    "bytes": 13272,
+    "sha256": "2d2712e878bd5b439c4a0a1eb68411d17e140acdebfdaa39bf1849371794fa9a"
+  },
+  "automation/development-partners-outreach/README.md": {
+    "bytes": 4709,
+    "sha256": "d89bef7af4251824eff3ed6c7deb5fb056ae2d1b3d58059f69ab76e06cad866c"
+  },
+  "automation/development-partners-outreach/queue.py": {
+    "bytes": 19250,
+    "sha256": "dad90acedc6e1c0762d64121a58cdff573e7cd13a7d2c4c5e099af5de0bc40ee"
+  },
+  "automation/development-partners-outreach/test_queue.py": {
+    "bytes": 8669,
+    "sha256": "c904071609dd70e836987fe925155db5fcdb5d806e7341b2fe872e202dc641b5"
+  },
+  "automation/development-partners-outreach-policy.json": {
+    "bytes": 4305,
+    "sha256": "2c57e2052c15112a14040fab4a45b6b9a1a05945277f0fa197fdec72ff4dacd2"
+  },
+  "automation/run_control.py": {
+    "bytes": 11240,
+    "sha256": "b275a43c5cdea529649e7393e5ec6233762b06a09906a5655e461ecf107ac776"
+  },
+  "automation/stage_timing.py": {
+    "bytes": 1518,
+    "sha256": "36269964db2b6cc025d00b535a9454773e74d4a80e624d735bafe21f901dd6f6"
+  },
+  "automation/test_company_index.py": {
+    "bytes": 2555,
+    "sha256": "b1a4ca28858cb2f0682e3e2460aef23732a00d94413828450908caa224fa6f69"
+  },
+  "policies/FORESIGHT-OUTREACH-PLAYBOOK.md": {
+    "bytes": 13011,
+    "sha256": "eaa08b675946668e7423156017c15fa904518a4cd7bf8db0206206e6b567fa3d"
+  },
+  "policies/FORESIGHT-TARGETING.txt": {
+    "bytes": 2285,
+    "sha256": "9943d8d17dd17e3ce087261f648e49e04bb450881457e2e95a8fcad03b2a6114"
+  },
+  "skills/development-partners/SKILL.md": {
+    "bytes": 40445,
+    "sha256": "1310738353189508fd120b62f307cc79d0397ab68e3807cd06b74463bc2cf813"
+  },
+  "skills/development-partners/agents/openai.yaml": {
+    "bytes": 201,
+    "sha256": "b249c036e018777f877f34d9788550e17dd8dcd4f33bc2b3e9381d7b357db233"
+  },
+  "skills/development-partners/config.example.json": {
+    "bytes": 3637,
+    "sha256": "9e890d7585abf1913388d72af7c616d90f89cfdc36b46ca95dae8a7efcdc4ea6"
+  },
+  "skills/development-partners/references/agents.json": {
+    "bytes": 23159,
+    "sha256": "09f81e9c50b85431096dbf337df6326129a87316a7bd12e7526221c8d412ba8a"
+  },
+  "skills/development-partners/references/bonus-checks.md": {
+    "bytes": 2547,
+    "sha256": "c9abb6580eaa4d9d68142829024bb45ec68f74208021ccab1a6426189aeab91d"
+  },
+  "skills/development-partners/references/bonus-reference-cases.json": {
+    "bytes": 1603,
+    "sha256": "be2364321f3c2b16dfeb730db3b7210c3f395949ef1bfe0f984946f43e8289ab"
+  },
+  "skills/development-partners/references/clay.md": {
+    "bytes": 10490,
+    "sha256": "aa334ca51b7abd54ed6a80f407d33dc33548cfd0e25660aa9e1659d984d6762e"
+  },
+  "skills/development-partners/references/handoff.md": {
+    "bytes": 9742,
+    "sha256": "10d7586abfd6abad42a7a8b6c3a79ec07077cb898456894fd3314144ec25213c"
+  },
+  "skills/development-partners/references/hot-zones.md": {
+    "bytes": 27354,
+    "sha256": "e01b1e380159ad06f6b4b37a7f4fce562db0cbf449194f4bfce58feb8bb25209"
+  },
+  "skills/development-partners/references/hubspot-schema.json": {
+    "bytes": 15701,
+    "sha256": "816853b877be52a9c711dd8f2b1b014eef2aa311b1d991bc3dc68a97e13ca2db"
+  },
+  "skills/development-partners/references/hubspot.md": {
+    "bytes": 7739,
+    "sha256": "f8b6fbd385d493f9c087d70e83a4b44fff3cb779621d04ba9c21c4e1820c5951"
+  },
+  "skills/development-partners/references/lease-heartbeat/2026-10-22-nine-hour-authorization.sql": {
+    "bytes": 1285,
+    "sha256": "e0da6ebb8b22780b7455dbc5b6c1dc30ce6347dc4482158b635ae29a1ba50081"
+  },
+  "skills/development-partners/references/lease-heartbeat/2026-10-23-nine-hour-authorization.sql": {
+    "bytes": 1285,
+    "sha256": "498580549f571fc851e11c1af92d0646f296cb51a9d5f0270b7749c0f89d4021"
+  },
+  "skills/development-partners/references/lease-heartbeat/index.ts": {
+    "bytes": 1141,
+    "sha256": "311d5fb226ecc63786b959a9449a6cc6bcfbc8a7d182d776a8ff8f15f245d73d"
+  },
+  "skills/development-partners/references/lease-heartbeat/lease_heartbeat.sql": {
+    "bytes": 2663,
+    "sha256": "86ce54773882d729972fbb6c863e9ee0c3a9fecc7ab0e5f718ed414d925526cc"
+  },
+  "skills/development-partners/references/operation.md": {
+    "bytes": 10116,
+    "sha256": "54e0202a4d3ff0639f7861af896863cfa8d595e74c26b5f584ceea0f9db24e65"
+  },
+  "skills/development-partners/references/regions.md": {
+    "bytes": 6979,
+    "sha256": "b7cbeeddfd4eb71d71b12207c93e39200f57a5b4b57ff7d965c5f3ab6e45042d"
+  },
+  "skills/development-partners/references/rubric.json": {
+    "bytes": 14782,
+    "sha256": "cc07ff31b214e57be5973a125c8aac4020d75ddf28619b6897445ab27f608bdc"
+  },
+  "skills/development-partners/references/shared-master.md": {
+    "bytes": 11997,
+    "sha256": "7ff989bc145a1589fdf07e20cc7c30eafe460c3fedfb34fb276310ccd05da492"
+  },
+  "skills/development-partners/references/shared-master.sql": {
+    "bytes": 6988,
+    "sha256": "edd36792338cdff9376fe0095db3afc49d0a3e51793e8a9418298b6b0d8ad32d"
+  },
+  "skills/development-partners/scripts/bonus_checks.py": {
+    "bytes": 8989,
+    "sha256": "5f6e8a4fbb8bdb161ada1be9ee7af5291850fe25b6c1496e51ef921d21d1b5c5"
+  },
+  "skills/development-partners/scripts/clay_enrichment.py": {
+    "bytes": 13315,
+    "sha256": "179c91ad4998a9c7550437d55e7247939213de3411c269493f6f20849c6c584e"
+  },
+  "skills/development-partners/scripts/commercial_fit.py": {
+    "bytes": 1604,
+    "sha256": "6a8b0baf1d71f9a465150ee123d62581a8b97ad6455e5646fdf21c6963751ae4"
+  },
+  "skills/development-partners/scripts/configure_shared.py": {
+    "bytes": 1792,
+    "sha256": "9ae3ea2b7878c35489ad68354248273ac243f3902eac052ee3bc5ac1d358dee8"
+  },
+  "skills/development-partners/scripts/hot_zone_intake.py": {
+    "bytes": 10733,
+    "sha256": "80d8ddd79e75d369f7814410069e49680deb955bd9ef4bea7859b61a05f9df52"
+  },
+  "skills/development-partners/scripts/hubspot_mapping.py": {
+    "bytes": 14266,
+    "sha256": "c2661e96027f7ed0e549416834412bcdbc9ae3b5ae6e83d220ef40461380f13e"
+  },
+  "skills/development-partners/scripts/hubspot_regions.py": {
+    "bytes": 8827,
+    "sha256": "c48c72972fb5c6dd2048cb37be83f1def41ab800980b1223961be300faf1e3f3"
+  },
+  "skills/development-partners/scripts/hubspot_registration.py": {
+    "bytes": 9592,
+    "sha256": "4221aa54a70f2d62cf596326585d9a73af0b7f39b935f0002750b2ec0b669908"
+  },
+  "skills/development-partners/scripts/lease_heartbeat.py": {
+    "bytes": 4952,
+    "sha256": "f36b9f39f9b9b1a45b216dc1c5de614b7796afa1464d7b2ad3715f748e7dbeaa"
+  },
+  "skills/development-partners/scripts/offline_research.py": {
+    "bytes": 6100,
+    "sha256": "e9596aa29d655ac990cb8d99111852e2a1993205c57c627e10c51667932f16e2"
+  },
+  "skills/development-partners/scripts/partner_pipeline.py": {
+    "bytes": 75652,
+    "sha256": "0baaa9345497e32d1d8a023590aab543ef0433cdaa60f49c38dc0b7a9a3f1d5f"
+  },
+  "skills/development-partners/scripts/physician_identity.py": {
+    "bytes": 1839,
+    "sha256": "3766eb1b2c916512adde3190d4ed3a193a9c9dfb84f8411093bc0069d49cab1c"
+  },
+  "skills/development-partners/scripts/practice_screening.py": {
+    "bytes": 6261,
+    "sha256": "8828cecce81430aea64a2fc0386f6b18256bd041046596edcb8fbf9acd050127"
+  },
+  "skills/development-partners/scripts/practice_tags.py": {
+    "bytes": 1512,
+    "sha256": "f8593579b2dc9737db39a13ce18e04e62e0b74903fb18a49be331193832ae42a"
+  },
+  "skills/development-partners/scripts/shared_checkout_pages.py": {
+    "bytes": 2627,
+    "sha256": "0b43bc81821e7f8f8d1f72d10af9831d686a2d642dbcf896819b89b694d590ae"
+  },
+  "skills/development-partners/scripts/shared_master.py": {
+    "bytes": 15482,
+    "sha256": "071a509635428c7de359a098e5877531c4fe45b1e23e42bf8a43cdd76549ab30"
+  },
+  "skills/development-partners/scripts/source_ecosystem.py": {
+    "bytes": 7177,
+    "sha256": "c761d64a17e4ee226fa901a9c5df460f8d14dfac403aa4fcfda5db90426fade3"
+  },
+  "skills/development-partners/scripts/source_policy.py": {
+    "bytes": 5932,
+    "sha256": "cbcfb82554eb7ad2686948f47b762f143ab478398f670ea82e66018cbc417c6a"
+  },
+  "skills/development-partners/scripts/test_batch_admission.py": {
+    "bytes": 2344,
+    "sha256": "fc95bfd4d9c62fd57b30756b9c677c1fb55ae7427312b5d17d02878d0f8688d4"
+  },
+  "skills/development-partners/scripts/test_lease_heartbeat.py": {
+    "bytes": 2660,
+    "sha256": "b45976076c5a6ed2237684c5a047be4e78e72795f28c7a0a9ac6bddacdb4dc74"
+  },
+  "skills/development-partners/scripts/test_offline_research.py": {
+    "bytes": 1600,
+    "sha256": "5bb3eb359a2c4254c551c91c2edfa5069724dc15bb0d425094889364cf96f7d3"
+  },
+  "skills/development-partners/scripts/test_physician_identity.py": {
+    "bytes": 1738,
+    "sha256": "1d21e4f1fca7dc6c7fe872c7bbb74b955de4ac87f316e6afa79136588187975f"
+  },
+  "skills/development-partners/scripts/test_practice_screening.py": {
+    "bytes": 12678,
+    "sha256": "bae9a52de22364d25cfe297198ff28d7d6065690f5a8797d97d74fbacd90a7a3"
+  },
+  "skills/development-partners/scripts/test_replenishment.py": {
+    "bytes": 1883,
+    "sha256": "56197fb97ff149c7188b0890ca53ea8f071b30baadf00e28c14d8e9c3303c13c"
+  },
+  "skills/development-partners/scripts/test_shared_checkout_pages.py": {
+    "bytes": 1339,
+    "sha256": "4cb891407f62512ec4fbb5fbfd6fc85c1e941368e9413ed75a4c3700b3772bdf"
+  },
+  "skills/development-partners/scripts/test_shared_delta.py": {
+    "bytes": 3136,
+    "sha256": "e97cc45f07a4145eedfe59ef2f078e5cc819f079cba6dd34c8862c468f84319e"
+  },
+  "skills/development-partners/scripts/test_source_ecosystem.py": {
+    "bytes": 7684,
+    "sha256": "bc207cc380f080544cdb910af1faee49ebb199853f67084991def0b5241e4856"
+  },
+  "skills/development-partners/scripts/test_worker_completion.py": {
+    "bytes": 3255,
+    "sha256": "0ace0ff13ef31b513882c7b1fd7e32a1098595d7febc370797792b9e6fe73448"
+  },
+  "skills/development-partners/scripts/workbook.mjs": {
+    "bytes": 22852,
+    "sha256": "beb4cc0f67f5619658a99d521e2ac98b9d1dac3cb29e87c96e3efea179787af2"
+  },
+  "skills/development-partners/scripts/workflow_handoff.py": {
+    "bytes": 7508,
+    "sha256": "7a802554173ed6a3f3ae85f536c6be2c820a5855eb67128d19f74b26dc9f5f5b"
+  },
+  "skills/development-partners-setup/SKILL.md": {
+    "bytes": 3077,
+    "sha256": "38936c5490a7ac6f8f33731c42e2f7847fd0e2176627486420add2b57f40f8d2"
+  }
+}

@@ -1,38 +1,42 @@
 # Foresight Development Partners
 
-Private source handoff prepared November 8, 2026 for review and migration into Frontrunner.
+We identify physicians at independent US practices who could help shape Foresight’s clinical AI products. This page describes the overnight workflow as of November 10, 2026. The repository also contains the November 8 source handoff for review and migration.
 
-## Start here
+## Current overnight workflow
 
-- `skills/development-partners/SKILL.md`: discovery, screening, scoring and handoff workflow.
-- `skills/development-partners/references/rubric.json` and `agents.json`: rubric and worker prompts.
-- `skills/development-partners/references/shared-master.md`: canonical Supabase storage, lease, checkpoint and recovery protocol.
-- `skills/development-partners-setup/SKILL.md`: colleague onboarding.
-- `automation/development-partners-nightly/`: scheduled research controller and runbooks.
-- `automation/development-partners-outreach/`: durable, idempotent post-research queue. It does not send emails by itself.
-- `policies/FORESIGHT-TARGETING.txt`: standing specialty scope; applies over conflicting historical examples/configuration.
-- `policies/FORESIGHT-OUTREACH-PLAYBOOK.md`: current saved outreach playbook.
+1. **Intake.** Start from a HubSpot company segment. Use the official practice website and NPI registry to verify the organization, ownership, specialty, roster, and physician identity. The overnight workflow targets five or more clinical providers. A complete roster below five is excluded. An uncertain count can proceed with the uncertainty recorded. City clinic discovery has a separate three-provider minimum.
+2. **Select and score one physician per clinic.** Prefer the organizational NPI’s authorized official when that person is a physician with a verified match. Otherwise use the first physician on the official clinic website and verify current affiliation. A verified score of 70 or higher earns the Development Partner label and the forward-facing route. Other eligible physicians can go through a bounded check for a current operational signal, such as an administrative hire, and receive needs-based or generic outreach.
+3. **Enrich and update HubSpot.** Reuse a verified work email where available and use Clay for missing addresses. Match the physician and practice before writing the HubSpot contact and association. Record the actual result and verify the write. The current overnight contact workflow processes physicians.
+4. **Enroll in Instantly.** Render the appropriate versioned template from the approved Google Doc using saved research. Check current suppression, duplicates, sender health and capacity, and the clinic’s local send window. Verify the lead in Instantly and track enrollment, campaign activation, and actual sends as separate milestones.
 
-## Shared services
+The specialty scope is neurology, cardiology, endocrinology, rheumatology, pulmonology, internal medicine, and primary care.
 
-The canonical team master remains Supabase project `svdtzmjpqvdvntlicpvt`, schema `development_partners`, workspace `foresight`. HubSpot portal: `342239911`. Clay workspace: `723119`. Source access does not grant account or database access. Each operator must connect their own approved accounts. Do not initialize another remote master or rerun the schema SQL against the existing master.
+## How the worker runs
 
-## Installation and portability
+A standalone supervisor on Fraser’s Mac runs the worker and restarts it on interruption. An authenticated connector gateway handles external calls. Supabase/Postgres holds company and contact records, research evidence, task state, and claims. The controller admits up to three clinics for research and overlaps research with downstream work while the queues are healthy. The worker records request IDs and provider receipts so it can resume after an interruption. If a paid lookup or external write has an unknown outcome, the worker holds that item for reconciliation before any replay. Independent clinics can keep moving.
 
-Copy the skill folders into the receiving machine's skills directory, read the setup skill, resolve that machine's Python/Node/dependency paths, and run `scripts/configure_shared.py` as documented. The example config is not a ready-to-run machine config. Read-only code review requires no credentials.
+## Where throughput drops
 
-This is a snapshot of the installed source, not a tested cross-machine deployment. Historical source/runbooks include Fraser-specific absolute paths, expired occurrence windows and prior authorization text. Adjust paths and establish new operator authorization before running. Repository access does not transfer Fraser's confirmation waivers, paid-enrichment permission, outreach authorization or schedules. No workflow or schedule was activated by this handoff.
+| Stage | What we observed |
+| --- | --- |
+| Practice and physician verification | The November 10 test covered 30 clinics. It recorded 24 completed intakes, 17 routed clinics, and 7 verified lead enrollments in draft campaigns. Some attrition is expected from eligibility. The run totals alone cannot separate that from incomplete evidence, worker errors, and queue delays. |
+| Email coverage | A separate 180-clinic collection run yielded 53 accepted work emails and 32 completed no-email outcomes. The accepted count measures address coverage. Delivery was outside that run’s scope. |
+| External calls and recovery | One rejected contact receipt stalled unrelated admission. The November 10 repair isolated the affected journal and demonstrated three independent research admissions while the case was still open. Lost responses still require reconciliation. |
+| Copy refresh and campaign activation | Full Google Doc reads repeatedly timed out. The worker now requests body and tab fields. In one November 10 recovery, Instantly required browser activation. Enrollment and activation can both succeed before the first send. |
 
-## Scope and intentional differences
+## Engineering review
 
-Target ONLY neurology, cardiology, endocrinology, rheumatology, pulmonology, internal medicine and primary care. The live machine config still contained older out-of-scope specialties; the shareable example is normalized to the standing scope. Its post-scoring automation is disabled, Clay approval is required, and expired heartbeat authorization was removed. Original installed scripts and references are retained as source evidence, with SHA-256 hashes in `SOURCE-MANIFEST.json`.
+Start by tracing one clinic from intake through a verified send. Measure queue wait, active processing, connector latency, and retries by stage. Give every terminal outcome a reason, including eligibility exclusion, unresolved evidence, missing email, duplicate, failed connector call, and campaign hold. This will show whether research capacity, enrichment coverage, or the integration handoffs are worth improving first. A representative cohort and per-stage timing are still needed to quantify the largest time bottleneck.
 
-Development-partner research generally targets five or more clinical providers and retains the 10-location/60-provider maximum, with documented uncertainty handling. City clinic discovery is a separate workflow with a three-provider minimum. Read the skill and latest policy before use.
+## Source handoff
 
-## Data and credentials
+[Download the November 8 source snapshot](./foresight-development-partners-source.zip) and see its [source manifest](./SOURCE-MANIFEST.json). The archive documents the earlier research runner and outreach queue. The current standalone worker, live Instantly enrollment path, and November 9–10 changes are described above and are outside this archive. Its sample configuration requires Clay approval and disables post-scoring automation. The earlier discovery skill also has upper size limits of 10 locations and 60 clinicians. The current HubSpot-segment overnight policy has no upper size cap.
 
-This package contains code, prompts, schemas and policies. It excludes live candidate databases, spreadsheets, CRM receipts, run logs, account sessions, webhooks, API keys, lease tokens, node_modules and caches. Access live research through the authorized shared master. The separate city-clinic, recontact and practice-administrator workflows are outside this repository.
+Start inside the archive with the following files.
 
-## Validation
+- `skills/development-partners/SKILL.md` and its rubric and worker prompts for discovery and scoring.
+- `skills/development-partners/references/shared-master.md` for the earlier Supabase storage and recovery protocol.
+- `automation/development-partners-nightly/` and `automation/development-partners-outreach/` for the earlier controller and durable handoff queue.
+- `skills/development-partners-setup/SKILL.md` for onboarding and `policies/` for the policies as archived.
 
-Snapshot integrity, JSON parsing and syntax of 37 Python files were checked locally. Three physician-identity regression tests passed using Python 3.12 (the system Python 3.9 lacks tomllib; use Python 3.11 or newer). No research, paid enrichment, CRM writes, emails or database migration is required to inspect the source. External integration and full production execution have not been tested from this package.
+Source review needs no service credentials. Running the archive on another machine would require local configuration and approved service connections. Snapshot validation covered integrity, JSON parsing, Python syntax, and three physician-identity regression tests. Cross-machine deployment and external integrations were outside that validation. The archive excludes live candidate data, run receipts, and credentials. City discovery, recontact, and practice-administrator workflows are separate.
